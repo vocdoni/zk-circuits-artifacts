@@ -1,0 +1,15 @@
+{
+  "name": "zk-circuits-artifacts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "postinstall": "cd node_modules/voccircuits/ && npm install",
+    "test": "echo \"undefined\""
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "snarkjs": "0.4.10",
+    "voccircuits": "github:vocdoni/zk-franchise-proof-circuit"
+  }
+}
