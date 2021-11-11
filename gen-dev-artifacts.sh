@@ -6,7 +6,7 @@ SNARKJS=./node_modules/.bin/snarkjs
 CIRCOM=circom 
 BUILD=build
 POWERSOFTAU=powersoftau
-DEVINFOFILE=dev-circuits-info.md
+DEVINFOFILE=zkcensusproof/dev/circuits-info.md
 
 powers_of_tau() {
 	echo "computing powers_of_tau"
@@ -63,6 +63,15 @@ component main {public [processId, censusRoot, nullifier, voteHash]}= Census($NL
 	$SNARKJS r1cs info $CIRCUITPATH/$BUILD/circuit.r1cs >> $DEVINFOFILE
 }
 
+compute_hashes() {
+	echo "\n## circuit: $NAME ($NLEVELS nLevels) file hashes (sha256) " >> $DEVINFOFILE
+	echo "\`\`\`" >> $DEVINFOFILE
+	sha256sum $CIRCUITPATH/circuit_final.zkey >> $DEVINFOFILE
+	sha256sum $CIRCUITPATH/circuit.wasm >> $DEVINFOFILE
+	sha256sum $CIRCUITPATH/verification_key.json >> $DEVINFOFILE
+	echo "\`\`\`" >> $DEVINFOFILE
+}
+
 if [ -d "$POWERSOFTAU" ]; then
 	echo "powers of tau already exist, avoid computing it"
 else
@@ -70,28 +79,33 @@ else
 	powers_of_tau
 fi
 
-touch $DEVINFOFILE
+echo "# dev env circuits artifacts" > $DEVINFOFILE
 
 NLEVELS=3
 NAME=$(echo "2 ^ $NLEVELS" | bc)
 CIRCUITPATH=zkcensusproof/dev/$NAME
 echo "compile_and_ts() of $CIRCUITPATH"
 compile_and_ts
+compute_hashes
 
 NLEVELS=4
 NAME=$(echo "2 ^ $NLEVELS" | bc)
 CIRCUITPATH=zkcensusproof/dev/$NAME
 echo "compile_and_ts() of $CIRCUITPATH"
 compile_and_ts
+compute_hashes
 
 NLEVELS=10
 NAME=$(echo "2 ^ $NLEVELS" | bc)
 CIRCUITPATH=zkcensusproof/dev/$NAME
 echo "compile_and_ts() of $CIRCUITPATH"
 compile_and_ts
+compute_hashes
 
 NLEVELS=16
 NAME=$(echo "2 ^ $NLEVELS" | bc)
 CIRCUITPATH=zkcensusproof/dev/$NAME
 echo "compile_and_ts() of $CIRCUITPATH"
 compile_and_ts
+compute_hashes
+
