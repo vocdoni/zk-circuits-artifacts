@@ -52,9 +52,9 @@ component main {public [processId, censusRoot, nullifier, voteHash]}= Census($NL
 	$SNARKJS zkey new $CIRCUITPATH/$BUILD/circuit.r1cs $CIRCUITPATH/$BUILD/pot_final.ptau $CIRCUITPATH/$BUILD/circuit_0000.zkey
 	$SNARKJS zkey contribute $CIRCUITPATH/$BUILD/circuit_0000.zkey $CIRCUITPATH/$BUILD/circuit_0001.zkey --name=contributor -v -e=random2
 	$SNARKJS zkey verify $CIRCUITPATH/$BUILD/circuit.r1cs $CIRCUITPATH/$BUILD/pot_final.ptau $CIRCUITPATH/$BUILD/circuit_0001.zkey
-	$SNARKJS zkey beacon $CIRCUITPATH/$BUILD/circuit_0001.zkey $CIRCUITPATH/circuit_final.zkey 0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f 10 -n=Final
-	$SNARKJS zkey verify $CIRCUITPATH/$BUILD/circuit.r1cs $CIRCUITPATH/$BUILD/pot_final.ptau $CIRCUITPATH/circuit_final.zkey
-	$SNARKJS zkey export verificationkey $CIRCUITPATH/circuit_final.zkey $CIRCUITPATH/verification_key.json
+	$SNARKJS zkey beacon $CIRCUITPATH/$BUILD/circuit_0001.zkey $CIRCUITPATH/circuit.zkey 0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f 10 -n=Final
+	$SNARKJS zkey verify $CIRCUITPATH/$BUILD/circuit.r1cs $CIRCUITPATH/$BUILD/pot_final.ptau $CIRCUITPATH/circuit.zkey
+	$SNARKJS zkey export verificationkey $CIRCUITPATH/circuit.zkey $CIRCUITPATH/verification_key.json
 	ftime="$(date -u +%s)"
 	echo "trusted setup done in ($(($(date -u +%s)-$itime))s)"
 
@@ -66,7 +66,7 @@ component main {public [processId, censusRoot, nullifier, voteHash]}= Census($NL
 compute_hashes() {
 	echo "\n## circuit: $NAME ($NLEVELS nLevels) file hashes (sha256) " >> $DEVINFOFILE
 	echo "\`\`\`" >> $DEVINFOFILE
-	sha256sum $CIRCUITPATH/circuit_final.zkey >> $DEVINFOFILE
+	sha256sum $CIRCUITPATH/circuit.zkey >> $DEVINFOFILE
 	sha256sum $CIRCUITPATH/circuit.wasm >> $DEVINFOFILE
 	sha256sum $CIRCUITPATH/verification_key.json >> $DEVINFOFILE
 	echo "\`\`\`" >> $DEVINFOFILE
