@@ -8,6 +8,8 @@ BUILD=build
 POWERSOFTAU=powersoftau
 DEVINFOFILE=zkcensusproof/dev/circuits-info.md
 
+CIRCUIT=$1
+
 powers_of_tau() {
 	echo "computing powers_of_tau"
 	mkdir $POWERSOFTAU
@@ -24,7 +26,7 @@ powers_of_tau() {
 compile_and_ts() {
 	CIRCUITCODE="pragma circom 2.0.0;
 
-include \"../../../node_modules/voccircuits/circuits/census.circom\";
+include \"$CIRCUIT\";
 
 component main {public [processId, censusRoot, nullifier, voteHash]}= Census($NLEVELS);"
 
