@@ -7,8 +7,7 @@ CIRCOM=circom
 BUILD=build
 POWERSOFTAU=powersoftau
 DEVINFOFILE=zkcensusproof/dev/circuits-info.md
-
-CIRCUIT=$1
+CIRCUIT="$PWD/$1"
 
 powers_of_tau() {
 	echo "computing powers_of_tau"
