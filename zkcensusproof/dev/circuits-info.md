@@ -1,29 +1,65 @@
 # dev env circuits artifacts
+## Circuit zkcensusproof/dev/8 leafs (3 levels)
+
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 3315
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 3308
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 6
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 6
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 19558
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 0
 
 ## circuit: 8 (3 nLevels) file hashes (sha256) 
 ```
-7d09a880e14e08143bb66a6f28e13b2707afabc79693ce1613f68083fd70ac31  zkcensusproof/dev/8/circuit.zkey
+6f57a57f3b09905bb7728b4eafbfac9d4012622b8d7a2e95184b8ca0d64a5ff1  zkcensusproof/dev/8/circuit.zkey
 d021d42d79d4e10b94a5785e1c1854ddb80d087cb58ad6bb29aa8b8d541d420d  zkcensusproof/dev/8/circuit.wasm
-f4876aa550e33de1d1f552dc38fa89f6e87e553fd05179e693f82f661cd0c6a0  zkcensusproof/dev/8/verification_key.json
+e75f1131cb78b4d8c58ca28ad726b0dfe940a1d3d76a91c4a4a982beac444796  zkcensusproof/dev/8/verification_key.json
 ```
+## Circuit zkcensusproof/dev/16 leafs (4 levels)
+
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 3563
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 3555
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 7
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 6
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 20370
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 0
 
 ## circuit: 16 (4 nLevels) file hashes (sha256) 
 ```
-2d84f9ce275f35e10b6debde1c53d74264ebb401077aaaa2ac4970e3a06eba03  zkcensusproof/dev/16/circuit.zkey
+be42201d014d6f71d1830fa5d5ff3d25151c94b4733f0d248ce0d6008226ffa3  zkcensusproof/dev/16/circuit.zkey
 e55effa3d7ee28037a073f1096012ae75d97d949320bb0dfbc26ca553b818c70  zkcensusproof/dev/16/circuit.wasm
-0d8af5c3cc443cfbaed59b6144b1edb959daacbae085a97f74cbafbe109de2fa  zkcensusproof/dev/16/verification_key.json
+4e71635e2493e3dabc65e095fd9557d14a23469c65e025b8dea00dd63d3c4569  zkcensusproof/dev/16/verification_key.json
 ```
+## Circuit zkcensusproof/dev/1024 leafs (10 levels)
+
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 5051
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 5037
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 13
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 6
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 25242
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 0
 
 ## circuit: 1024 (10 nLevels) file hashes (sha256) 
 ```
-1cd0c9225210700d4d6307493bbe5f98554e29339daba6d9bd08a4e0e78df443  zkcensusproof/dev/1024/circuit.zkey
+fe4d825776e03644acb9e62924f2660f4d525ff712afa1b5a4a4fa1590b7a0d2  zkcensusproof/dev/1024/circuit.zkey
 61b40e11ece8de3fbfaf27dbd984e0e0b1fa05ee72d4faa0c2be06c1d7a9b845  zkcensusproof/dev/1024/circuit.wasm
-aed892ff98ab37b877cfcb678cb5f48f1be9d09dbbaf74b5877f46b54d10f9ad  zkcensusproof/dev/1024/verification_key.json
+78c11679fc8a12f412d96982b541caf5650a3f83a6b5c1f83f0f6e04c6b2f6c1  zkcensusproof/dev/1024/verification_key.json
 ```
+## Circuit zkcensusproof/dev/65536 leafs (16 levels)
+
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 6539
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 6519
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 19
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 6
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 30114
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 0
 
 ## circuit: 65536 (16 nLevels) file hashes (sha256) 
 ```
-b7fb6f74ecf56e41de103e679c76c45a1bde99e2203b2ab6928396020f4d4ab6  zkcensusproof/dev/65536/circuit.zkey
+e68dcecc62251c12d37b21b8dc4fd0220a31a416f3ef76e6c9bcfe70655d0b9c  zkcensusproof/dev/65536/circuit.zkey
 1d975d68220d1f10bd54e2f53ea9526ce8f916efb15a2079edc3db9403a78278  zkcensusproof/dev/65536/circuit.wasm
-50029154e81a2078eff83751454bb3ece2cf9391103cc17306d47f7d4461b0b6  zkcensusproof/dev/65536/verification_key.json
+fe77f14407df1333acd6d474785af4c1e2479467da375420ec0d69437778fec1  zkcensusproof/dev/65536/verification_key.json
 ```
